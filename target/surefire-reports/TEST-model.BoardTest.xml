@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="model.BoardTest" time="0.037" tests="13" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="model.BoardTest" time="0.035" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/nicolaspotel/M2/AQL/TP2/repo-human/target/surefire/surefirebooter-20260914212401182_3.jar /Users/nicolaspotel/M2/AQL/TP2/repo-human/target/surefire 2026-09-14T21-24-01_116-jvmRun1 surefire-20260914212401182_1tmp surefire_0-20260914212401182_2tmp"/>
+    <property name="sun.java.command" value="/Users/nicolaspotel/M2/AQL/TP2/repo-human/target/surefire/surefirebooter-20260914215244873_3.jar /Users/nicolaspotel/M2/AQL/TP2/repo-human/target/surefire 2026-09-14T21-52-44_822-jvmRun1 surefire-20260914215244873_1tmp surefire_0-20260914215244873_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/nicolaspotel/M2/AQL/TP2/repo-human/target/test-classes:/Users/nicolaspotel/M2/AQL/TP2/repo-human/target/classes:/Users/nicolaspotel/.m2/repository/org/junit/jupiter/junit-jupiter/5.14.4/junit-jupiter-5.14.4.jar:/Users/nicolaspotel/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.14.4/junit-jupiter-api-5.14.4.jar:/Users/nicolaspotel/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/nicolaspotel/.m2/repository/org/junit/platform/junit-platform-commons/1.14.4/junit-platform-commons-1.14.4.jar:/Users/nicolaspotel/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/nicolaspotel/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.14.4/junit-jupiter-params-5.14.4.jar:/Users/nicolaspotel/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.14.4/junit-jupiter-engine-5.14.4.jar:/Users/nicolaspotel/.m2/repository/org/junit/platform/junit-platform-engine/1.14.4/junit-platform-engine-1.14.4.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/nicolaspotel/M2/AQL/TP2/repo-human/target/surefire/surefirebooter-20260914212401182_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/nicolaspotel/M2/AQL/TP2/repo-human/target/surefire/surefirebooter-20260914215244873_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="23.0.1"/>
@@ -58,17 +58,20 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="testMarkFinishingMove" classname="model.BoardTest" time="0.018"/>
+  <testcase name="testMarkFinishingMove" classname="model.BoardTest" time="0.013"/>
   <testcase name="testPlayingValidPosition" classname="model.BoardTest" time="0.001"/>
+  <testcase name="testTwoOnAntiDiagonalIsNotYetAWin" classname="model.BoardTest" time="0.001"/>
   <testcase name="testPlayWinsHorizontally" classname="model.BoardTest" time="0.0"/>
   <testcase name="testPlayerWinsVertically" classname="model.BoardTest" time="0.0"/>
-  <testcase name="testRowOutOfBounds" classname="model.BoardTest" time="0.0"/>
+  <testcase name="testRowOutOfBounds" classname="model.BoardTest" time="0.001"/>
   <testcase name="testColumnOutOfBounds" classname="model.BoardTest" time="0.001"/>
-  <testcase name="testPlayerWinsDiagonallyA" classname="model.BoardTest" time="0.001"/>
-  <testcase name="testPlayingInFinishedGame" classname="model.BoardTest" time="0.0"/>
-  <testcase name="testMarkNonFinishingMove" classname="model.BoardTest" time="0.0"/>
+  <testcase name="testPlayerWinsDiagonallyA" classname="model.BoardTest" time="0.0"/>
+  <testcase name="testPlayingInFinishedGame" classname="model.BoardTest" time="0.001"/>
+  <testcase name="testMarkNonFinishingMove" classname="model.BoardTest" time="0.001"/>
   <testcase name="testXWinsDiagonallyB" classname="model.BoardTest" time="0.0"/>
-  <testcase name="testPlayingInNonEmptyCell" classname="model.BoardTest" time="0.001"/>
-  <testcase name="testNewBoard" classname="model.BoardTest" time="0.0"/>
+  <testcase name="testTwoOnMainDiagonalIsNotYetAWin" classname="model.BoardTest" time="0.0"/>
+  <testcase name="testTwoInARowIsNotYetAWin" classname="model.BoardTest" time="0.001"/>
+  <testcase name="testPlayingInNonEmptyCell" classname="model.BoardTest" time="0.0"/>
+  <testcase name="testNewBoard" classname="model.BoardTest" time="0.001"/>
   <testcase name="testMarkInvalidPosition" classname="model.BoardTest" time="0.0"/>
 </testsuite>

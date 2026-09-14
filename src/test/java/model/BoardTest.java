@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -21,6 +22,7 @@ class BoardTest {
         assertNull(board.getWinner());
         assertEquals(Player.X, board.getCurrentTurn());
         assertTrue(board.isInProgressMode());
+        assertFalse(board.isInFinishedMode());
     }
 
     @Test
@@ -38,6 +40,7 @@ class BoardTest {
         board.mark(0, 1);
         board.mark(2, 2);
         assertTrue(board.isInFinishedMode());
+        assertFalse(board.isInProgressMode());
         assertEquals(Player.X, board.getWinner());
     }
 
@@ -129,6 +132,39 @@ class BoardTest {
     }
 
     @Test
+    void testTwoInARowIsNotYetAWin() {
+        board.mark(0, 0);
+        board.mark(1, 0);
+        board.mark(0, 1);
+
+        assertFalse(board.isInFinishedMode());
+        assertTrue(board.isInProgressMode());
+        assertNull(board.getWinner());
+    }
+
+    @Test
+    void testTwoOnMainDiagonalIsNotYetAWin() {
+        board.mark(0, 0);
+        board.mark(0, 1);
+        board.mark(1, 1);
+
+        assertFalse(board.isInFinishedMode());
+        assertTrue(board.isInProgressMode());
+        assertNull(board.getWinner());
+    }
+
+    @Test
+    void testTwoOnAntiDiagonalIsNotYetAWin() {
+        board.mark(1, 1);
+        board.mark(0, 0);
+        board.mark(2, 0);
+
+        assertFalse(board.isInFinishedMode());
+        assertTrue(board.isInProgressMode());
+        assertNull(board.getWinner());
+    }
+
+    @Test
     void testXWinsDiagonallyB() {
         board.mark(2, 0);
         board.mark(0, 0);
@@ -139,29 +175,5 @@ class BoardTest {
         assertTrue(board.isInFinishedMode());
         assertEquals(Player.X, board.getWinner());
     }
-
-    /**
-     * /**
-     * CE14
-     * Result =
-     * | O | X | X |
-     * | X | O | O |
-     * | X | O | X |
-     *
-    @Test
-    void testNullGame() {
-        board.mark(0, 0);
-        board.mark(0, 1);
-        board.mark(0, 2);
-        board.mark(1, 1);
-        board.mark(1, 0);
-        board.mark(1, 2);
-        board.mark(2, 1);
-        board.mark(2, 0);
-        board.mark(2, 2);
-      
-        assertTrue(board.isInFinishedMode());
-        assertNull(board.getWinner());
-    }*/
 
 }
